@@ -17,50 +17,50 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
 
         <a class="navbar-brand" href="#">Travel Partner</a>
 
-        <span class="navbar-text ml-auto">
+        <div class="navbar-text align-content-end">
             A little help is just a few clicks away!
-        </span>
+        </div>
 
     </nav>
 
     <div class="search container" id="map">
 
-        <input type="search" id="place-search-input" placeholder="Start Searching..." class="mq-input">
-          
-        <!-- Map will go here  -->
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map"></div>
 
     </div>
 
     <div class="container" id="text-trans">
 
-        <div class="row">
+        <form>
 
-            <div class="col-md-5">
-
-                <p>What do you need translated?:</p>
-                <textarea id="needTrans" rows="5" cols="33"></textarea>
-
+            <div class="form-group">
+                <label for="eng-trans">What would you like to say?</label>
+                <textarea class="form-control" id="transText" placeholder="Type what you'd like translated..."
+                    rows="3"></textarea>
+                <button class="btn btn-primary" id="search-btn"><i class="fas fa-search"></i>Translate!</button>
             </div>
 
-            <div class="col-md-5">
-
-                <p>Your translated text:</p>
-                <textarea id="translated" rows="5" cols="33"></textarea>
-
+            <div class="form-group">
+                <label for="tans-text">Translated Text:</label>
+                <textarea class="form-control" placeholder="Translated text will appear here..." id="translatedText"
+                    rows="3"></textarea>
             </div>
 
-        </div>
+        </form>
 
 
     </div>
 
 
 
-
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs6mUIp6GBLdN9WkE_2e7XVIS-HMlMSmw&libraries=places&callback=initAutocomplete"
+        async defer></script>
 
 
 </body>
