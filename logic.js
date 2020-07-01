@@ -4,7 +4,6 @@ $.ajax({
   url: queryURL,
   method: "GET"
   
-  console.log(queryURL)
 
 }).then(function (response) {
     
