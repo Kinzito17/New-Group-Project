@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 * {
     box-sizing: border-box;
   }
@@ -45,3 +46,21 @@ iframe {
 
   }
       
+=======
+#map {
+width: 80%; 
+height: 530px;
+
+
+}
+#search-input {
+    width: 80%; 
+  
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+>>>>>>> Stashed changes
