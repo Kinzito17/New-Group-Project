@@ -1,14 +1,14 @@
 
-var queryURL = "https://api.cognitive.microsofttranslator.com/languages?api-version=3.0"
-$.ajax({
-  url: queryURL,
-  method: "GET"
+// var queryURL = "https://api.cognitive.microsofttranslator.com/languages?api-version=3.0"
+// $.ajax({
+//   url: queryURL,
+//   method: "GET"
   
-}).then(function (response) {
+// }).then(function (response) {
     
 
-}
-);
+// }
+// );
 
 
 
@@ -77,11 +77,10 @@ $(document).ready(function(){
     // http://www.mapquestapi.com/search/v2/search?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24&location=Beaumont
 
 
-    $.ajax({``
+    $.ajax({
         url: queryURL,
-        method: "GET",
+        method: "GET"
         
-
     })
     
     .then(function (response) {

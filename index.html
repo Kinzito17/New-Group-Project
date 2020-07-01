@@ -5,25 +5,20 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <<<<<<< Updated upstream <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js">
-        </script>
-        <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
-        <!-- Search links -->
-        <script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
-        <link type="text/css" rel="stylesheet"
-            href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css" />
-        <link rel="stylesheet" href="style.css" />
-        <title>TravelerTranslate</title>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js">
+    </script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+    <!-- Search links -->
+    <script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TravelerTranslate</title>
 
-        <title>Document</title>
 
 </head>
 
-<body>
+<body style="border: 0; margin: 0;">
 
-    <body style="border: 0; margin: 0;">
-        <input type="search" id="search-input" placeholder="Start Searching..." />
-        <div id="map"></div>
     <nav class="navbar navbar-expand-lg navbar-light">
 
         <a class="navbar-brand" href="#">Travel Partner</a>
@@ -33,18 +28,17 @@
         </div>
 
     </nav>
-
-    <div class="search container" id="map">
-
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-        <div id="map"></div>
-
-    </div>
-
     <div class="container" id="text-trans">
+<!-- map starts -->
 
+        <div class="map-search">
+
+            <input type="search" id="search-input" placeholder="Start Searching..." />
+            <div id="map"></div>
+        </div>
+
+<!-- translate starts -->
         <form>
-
             <div class="form-group">
                 <label for="eng-trans">What would you like to say?</label>
                 <textarea class="form-control" id="transText" placeholder="Type what you'd like translated..."
@@ -64,6 +58,7 @@
     </div>
 
 
+    
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -72,5 +67,4 @@
 
 </body>
 
-
-
+</html>
