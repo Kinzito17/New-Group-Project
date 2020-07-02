@@ -26,26 +26,6 @@ iframe {
   .navbar-text {
       padding-bottom: 0px;
   }
-
-/* .map-search {
-    margin: auto;
-} */
-  @media (max-width: 484px) {
-
-    .navbar {
-        justify-content: center;
-    }
-
-    .ml-auto {
-        margin-left: none;
-    }
-
-    #text-trans {
-        text-align: center;
-    }
-
-
-  }
       
 #map {
 width: 80%; 
@@ -66,3 +46,19 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  @media (max-width: 484px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .ml-auto {
+        margin-left: none;
+    }
+
+    #text-trans {
+        text-align: center;
+    }
+  }
+
