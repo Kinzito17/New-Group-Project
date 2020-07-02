@@ -26,7 +26,26 @@ iframe {
   .navbar-text {
       padding-bottom: 0px;
   }
+      
+#map {
+width: 80%; 
+height: 530px;
+border-radius: 40px;
+border-width: 5px;
+border-color: black;
 
+
+}
+#search-input {
+    width: 80%; 
+  
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   @media (max-width: 484px) {
 
@@ -41,6 +60,5 @@ iframe {
     #text-trans {
         text-align: center;
     }
-
-
   }
+
