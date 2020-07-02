@@ -4,20 +4,17 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css">
-    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <title>Document</title>
+    <title>Travel Partner</title>
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-xl navbar-light">
 
         <a class="navbar-brand" href="#">Travel Partner</a>
 
@@ -27,22 +24,15 @@
 
     </nav>
 
-    <div class="search container" id="map">
-
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-        <div id="map"></div>
-
-    </div>
-
     <div class="container" id="text-trans">
 
         <form>
 
             <div class="form-group">
                 <label for="eng-trans">What would you like to say?</label>
-                <textarea class="form-control" id="transText" placeholder="Type what you'd like translated..."
-                    rows="3"></textarea>
-                <button class="btn btn-primary" id="search-btn"><i class="fas fa-search"></i>Translate!</button>
+                <input type="text" class="form-control" id="trans-text"
+                    placeholder="Type what you'd like translated...">
+                <button class="btn btn-primary" id="trans-btn">Translate!</button>
             </div>
 
             <div class="form-group">
@@ -53,14 +43,12 @@
 
         </form>
 
-
     </div>
 
-
-
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs6mUIp6GBLdN9WkE_2e7XVIS-HMlMSmw&libraries=places&callback=initAutocomplete"
-        async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="logic.js"></script>
 
 
 </body>
