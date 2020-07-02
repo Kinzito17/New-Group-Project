@@ -1,14 +1,41 @@
 
-var queryURL = "https://api.cognitive.microsofttranslator.com/languages?api-version=3.0"
-$.ajax({
-  url: queryURL,
-  method: "GET"
+
+$(document).ready(function(){
+
+
+
+    // map logic start
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY291cnRuZXlqIiwiYSI6ImNrYzN0OW12ZDAxOGwycW1ydjc0bW9mMG0ifQ.VWF3V-tNFAcHm2RpqpbBTg';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-97.7431, 30.2672],
+        zoom: 13
+        });
+         
+        map.addControl(
+        new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+        })
+        );
+    // map logic end
+
+
+
+
+    });
+
+// var queryURL = "https://api.cognitive.microsofttranslator.com/languages?api-version=3.0"
+// $.ajax({
+//   url: queryURL,
+//   method: "GET"
   
-}).then(function (response) {
+// }).then(function (response) {
     
 
-}
-);
+// }
+// );
 
 
 
@@ -50,86 +77,3 @@ $.ajax({
 //then
 //make a variable for response lat and lon
 //use that variable to set the lat lon ("center") of the map view
-
-
-
-
-$(document).ready(function(){
-
-
-
-    //create even listener for Enter on search bar
-    $("#search-input").on("keyup", function(event){
-        if (event.keyCode === 13) {
-            console.log("Enter");
-            mapCall();
-        }
-    });
-
-
-
-    function mapCall() { 
-    
-    var userSearch = $("#search-input").val();
-    console.log(userSearch);
-    
-    var queryURL = `http://www.mapquestapi.com/search/v2/search?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24&location=${userSearch}`;
-    // http://www.mapquestapi.com/search/v2/search?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24&location=Beaumont
-
-
-    $.ajax({``
-        url: queryURL,
-        method: "GET",
-        
-
-    })
-    
-    .then(function (response) {
-        console.log(response);
-        var lat = response.origin.displayLatLng.lat;
-        console.log(lat);
-        var lng = response.origin.displayLatLng.lng;
-        console.log(lng);
-
-        let latlng = parseFloat(lat) + "," + parseFloat(lng);
-        console.log(latlng);
-
-    })
-
-
-  };
-
-
-    placeSearch({
-        key: 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24',
-        container: document.querySelector('#search-input'),
-        useDeviceLocation: false,
-        collection: [
-          'poi',
-          'airport',
-          'address',
-          'adminArea',
-        ]
-      });
-    
-    L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
-
-    var map = L.mapquest.map('map', {
-      center: [41.881832, -87.623177],
-      layers: L.mapquest.tileLayer('map'),
-      zoom: 12
-    });
-
-    map.addControl(L.mapquest.control());
-
-
-  
-
-  }); //closing document ready
-
-
-
-
-
-
-
