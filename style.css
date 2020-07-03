@@ -2,6 +2,12 @@
     box-sizing: border-box;
   }
 
+  body {
+      border: 0px;
+      margin: 0px;
+      background: url(https://miro.medium.com/max/3840/1*xMuIOwjliGUPjkzukeWKfw.jpeg);
+  }
+
 form {
     margin-top: 10px;
 }
@@ -14,6 +20,10 @@ iframe {
     margin-top: 5px;
 }
 
+.btn-group {
+    margin-bottom: 10px;
+}
+
   .navbar{
       margin-bottom: 10px;
       background-color: rgb(60, 148, 148);
@@ -21,6 +31,7 @@ iframe {
 
   .navbar-brand {
       font-size: 30px;
+      color: white;
   }
 
   .navbar-text {
@@ -58,6 +69,10 @@ body {
     padding: 0;
   }
 
+  #trans-btn {
+      background-color: blueviolet;
+  }
+
   @media (max-width: 484px) {
 
     .navbar {
@@ -72,3 +87,4 @@ body {
         text-align: center;
     }
   }
+

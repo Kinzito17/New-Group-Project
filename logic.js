@@ -1,4 +1,5 @@
 var APIKey = "AIzaSyA6dPYvFRmtr6QqLt7KrqQlqXOab3FMGh0";
+var langSelected = $("#lang-btn").text();
 
 $(document).ready(function () {
 
@@ -10,20 +11,44 @@ $(document).ready(function () {
     });
 
     //allows enter button to be used to "click" the translate button
-    $('#trans-btn').keypress(function (e) {
-        if (e.which == 13) {
+    $('#trans-btn').keypress(function (event) {
+        if (event.which == 13) {
             $('#trans-btn').click();
         }
     });
 
-    //clicking on previous searches will prompt the search again
-    $(".list-group").on("click", "li", function () {
-        startTranslation($(this).text());
+    //clicking on language will update
+    $("#lang-opt").on("click", "li", function (event) {
+        event.preventDefault();
+        console.log("hello");
+        $("#lang-btn").text($(this).text());
+        
+        if ($("#lang-btn").text() === "Spanish") {
+            langSelected = "es";
+        } else if ($("#lang-btn").text() === "French") {
+            langSelected = "fr";
+        } else if ($("#lang-btn").text() === "German") {
+            langSelected = "de";
+        } else if ($("#lang-btn").text() === "Japanese") {
+            langSelected = "ja";
+        } else if ($("#lang-btn").text() === "Russian") {
+            langSelected = "ru";
+        } else {
+            langSelected = "en";
+        }
+        console.log(langSelected);
+
     });
 
+    //clear text written for translation
+    $("#clear-btn").on("click", function (event) {
+        event.preventDefault();
+        $("#trans-text").empty();
+      });
+
     //API call that translates the text input
-    function startTranslation(transText) {
-        var queryURL = "https://translation.googleapis.com/language/translate/v2?q=" + transText + "&target=es&key=" + APIKey;
+    function startTranslation(transText,) {
+        var queryURL = "https://translation.googleapis.com/language/translate/v2?q=" + transText + "&target=" + langSelected + "&key=" + APIKey;
 
         $.ajax({
             url: queryURL,
