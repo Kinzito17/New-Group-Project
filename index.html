@@ -26,7 +26,7 @@
 
 </head>
 
-<body style="border: 0; margin: 0;">
+<body>
 
     <nav class="navbar navbar-expand-xl navbar-light">
 
@@ -54,16 +54,33 @@
 
         <form>
             <div class="form-group">
+                
                 <label for="eng-trans">What would you like to say?</label>
                 <input type="text" class="form-control" id="trans-text"
                     placeholder="Type what you'd like translated...">
-                <button class="btn btn-primary" id="trans-btn">Translate!</button>
+                    
             </div>
 
             <div class="form-group">
-                <label for="tans-text">Translated Text:</label>
+
+                <div class="btn-group">
+                    <button id="lang-btn" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Select Language
+                    </button>
+                    <div id="lang-opt" class="dropdown-menu">
+                      <li class="dropdown-item" type="button">Spanish</li>
+                      <li class="dropdown-item" type="button">French</li>
+                      <li class="dropdown-item" type="button">German</li>
+                      <li class="dropdown-item" type="button">Japanese</li>
+                      <li class="dropdown-item" type="button">Russian</li>
+                      <li class="dropdown-item" type="button">English</li>
+                    </div>
+                  </div>
+
                 <textarea class="form-control" placeholder="Translated text will appear here..." id="translatedText"
                     rows="3"></textarea>
+
+                    <button class="btn btn-primary" id="trans-btn">Translate!</button>
             </div>
 
         </form>
