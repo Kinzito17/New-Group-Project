@@ -2,10 +2,10 @@
     box-sizing: border-box;
   }
 
-  body {
-      border: 0px;
-      margin: 0px;
-      background: url(https://miro.medium.com/max/3840/1*xMuIOwjliGUPjkzukeWKfw.jpeg);
+body {
+    border: 0px;
+    margin: 0px;
+    background: url(https://miro.medium.com/max/3840/1*xMuIOwjliGUPjkzukeWKfw.jpeg);
   }
 
 form {
@@ -16,30 +16,48 @@ iframe {
     margin-top: 5px;
 }
 
+p {
+    margin-bottom: 5px;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.common {
+    margin-bottom: 5px;
+    background-color: #FCBF49;
+    font-weight: 700;
+}
+
 .btn-primary {
     margin-top: 5px;
+    background-color: #FCBF49;
+    color: black;
+    border-color: #FCBF49;
+    font-weight: 600;
 }
 
 .btn-group {
     margin-bottom: 10px;
 }
 
-  .navbar{
-      margin-bottom: 10px;
-      background-color: rgb(60, 148, 148);
+.navbar{
+    margin-bottom: 10px;
+    background-color: rgb(60, 148, 148);
   }
 
-  .navbar-brand {
-      font-size: 30px;
-      color: white;
+.navbar-brand {
+    font-size: 30px;
+    color: white;
   }
 
-  .navbar-text {
-      padding-bottom: 0px;
+.navbar-text {
+    padding-bottom: 0px;
   }
 
-  .map-search {
+.map-search {
     text-align: -webkit-center;
+    margin: 0;
 }
 
 .form-control {
@@ -47,44 +65,46 @@ iframe {
 }
 .form-group {
     margin-bottom: 5px;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
 }
       
 #map {
-width: 80%; 
-height: 530px;
-border-radius: 10px;
-border-width: 5px;
-border-color: black;
-
-
+    width: 90%; 
+    height: 430px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: black;
 }
+
 #search-input {
     width: 80%; 
-  
 }
 
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-  }
+}
 
-  #trans-btn {
-      background-color: blueviolet;
-  }
+#translate-btn {
+    background-color: #FCBF49;
+}
 
-  @media (max-width: 484px) {
+@media (max-width: 484px) {
 
-    .navbar {
-        justify-content: center;
-    }
+.navbar {
+    justify-content: center;
+}
 
-    .ml-auto {
-        margin-left: none;
-    }
+.ml-auto {
+    margin-left: none;
+}
 
-    #text-trans {
-        text-align: center;
-    }
-  }
+#text-translate {
+    text-align: center;
+}
+
+}
 
