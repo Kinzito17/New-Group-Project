@@ -22,41 +22,38 @@
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>Travel Buddy</title>
+    <title>TravelerPartner</title>
 
 </head>
 
 <body>
 
+    <nav class="navbar navbar-expand-xl navbar-light">
 
-    <nav class="navbar navbar-dark bg-light">
-        <a class="navbar-brand" href="About.html">
-            <img class="pic" src="LOGO.png" width="30" height="30" alt="TravelBuddyLOGO" loading="lazy">
-        </a>
+        <a class="navbar-brand" href="index.html">Travel Partner</a>
+
+        <div class="navbar-text ml-md-auto">
+            A little help is just a few clicks away!
+        </div>
+
     </nav>
-    <!-- map start -->
-    <div class="map-container">
+
+    <div class="container map-container" id="map-container">
+
         <div class="row">
 
-            </nav>
+            <!-- map starts -->
 
-            <div class="container map-container" id="map-container">
+            <div class="col-md-12">
 
-                <div class="row">
-
-                    <!-- map starts -->
-
-                    <div class="col-md-12">
-
-                        <div class="map-search">
-                            <div id="map"></div>
-                        </div>
-
-                    </div>
-
+                <div class="map-search">
+                    <div id="map"></div>
                 </div>
+
             </div>
+
         </div>
+
     </div>
 
     <div class="container" id="text-translate">
@@ -80,17 +77,12 @@
                             <button type="button" id="restaurant" class="btn btn-warning common">Restaurant?</button>
                             <button type="button" id="market" class="btn btn-warning common">Market?</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-                <div class="row">
-                    <div class="col-md-6">
 
                         <label for="translation">What would you like to say?</label>
                         <textarea type="text" class="form-control" id="translation-text"
                             placeholder="Type what you'd like translated..." rows="3"></textarea>
 
-                    
+                    </div>
 
                     <div class="form-group">
 
@@ -109,19 +101,91 @@
                                 <li class="dropdown-item" type="button">Russian</li>
                                 <li class="dropdown-item" type="button">English</li>
                             </div>
+
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <label for="translation">Translation</label>
+
                         <textarea class="form-control" placeholder="Translated text will appear here..."
                             id="translatedText" rows="3"></textarea>
 
                         <button class="btn btn-primary" id="translate-btn">Translate!</button>
 
-                    
                     </div>
+
                 </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="randFact" type="button" class="btn btn-primary" data-toggle="modal" data-target="#randomFact">
+        Fun Facts!
+    </button>
+
+    <!-- modal content -->
+    <div class="modal fade" id="randomFact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="exampleModalLabel">Learn Something New Today!</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+                <div class="modal-body"></div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">I Feel Smarter
+                        Already!</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="randFact" type="button" class="btn btn-primary" data-toggle="modal" data-target="#randomFact">
+        Fun Facts!
+    </button>
+
+    <!-- modal content -->
+    <div class="modal fade" id="randomFact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="exampleModalLabel">Learn Something New Today!</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+                <div class="modal-body"></div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">I Feel Smarter
+                        Already!</button>
+
+                </div>
 
             </div>
 
@@ -142,3 +206,4 @@
 </body>
 
 </html>
+
