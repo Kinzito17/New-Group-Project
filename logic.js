@@ -1,19 +1,20 @@
 var APIKey = "AIzaSyA6dPYvFRmtr6QqLt7KrqQlqXOab3FMGh0";
 var langSelected = $("#lang-btn").text();
+var translateText = $(".common").text();
 
 $(document).ready(function () {
 
     //clicking the translate button starts the translate query
-    $("#trans-btn").on("click", function (event) {
+    $("#translate-btn").on("click", function (event) {
         event.preventDefault();
-        var transText = $("#trans-text").val();
-        startTranslation(transText);
+        var translateText = $("#translation-text").val();
+        startTranslation(translateText);
     });
 
     //allows enter button to be used to "click" the translate button
-    $('#trans-btn').keypress(function (event) {
+    $('#translate-btn').keypress(function (event) {
         if (event.which == 13) {
-            $('#trans-btn').click();
+            $('#translate-btn').click();
         }
     });
 
@@ -37,18 +38,34 @@ $(document).ready(function () {
             langSelected = "en";
         }
         console.log(langSelected);
+       
+    });
+ 
+    //quick translation buttons
+    $(".common").on("click", function (event) {
+        event.preventDefault();
+        var translateText = $(".common").text();
+        if ($("#restroom").text() === "Restroom?") {
+            translateText = "Where is the nearest bathroom?";
+        } else if ($("#atm").text() === "ATM?") {
+            translateText = "Where is the nearest bank or ATM?";
+        } else if ($("#train").text() === "Train?") {
+            translateText = "Where is the nearest train?";
+        } else if ($("#coffee").text() === "Coffee?") {
+            translateText = "Where can I get a good cup of coffee?";
+        } else if ($("#restaurant").text() === "Restaurant?") {
+            translateText = "What is the best restaurant in town?";
+        } else if ($("#market").text() === "Market?") {
+            translateText = "Where is the nearest market?";
+        };  
+
+        startTranslation(translateText);
 
     });
 
-    //clear text written for translation
-    $("#clear-btn").on("click", function (event) {
-        event.preventDefault();
-        $("#trans-text").empty();
-      });
-
     //API call that translates the text input
-    function startTranslation(transText,) {
-        var queryURL = "https://translation.googleapis.com/language/translate/v2?q=" + transText + "&target=" + langSelected + "&key=" + APIKey;
+    function startTranslation(translateText) {
+        var queryURL = "https://translation.googleapis.com/language/translate/v2?q=" + translateText + "&target=" + langSelected + "&key=" + APIKey;
 
         $.ajax({
             url: queryURL,
@@ -85,6 +102,7 @@ $(document).ready(function () {
     mapboxgl: mapboxgl
     })
     );
+
     // map logic end
 
 });

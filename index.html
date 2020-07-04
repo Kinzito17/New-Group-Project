@@ -38,52 +38,84 @@
 
     </nav>
 
-    <div class="container mapCont">
+    <div class="container map-container" id="map-container">
 
-        <!-- map starts -->
+        <div class="row">
 
-        <div class="map-search">
-            <div id="map"></div>
+            <!-- map starts -->
+
+            <div class="col-md-12">
+
+                <div class="map-search">
+                    <div id="map"></div>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
 
-    <div class="container" id="text-trans">
+    <div class="container" id="text-translate">
 
-        <!-- translate starts -->
+        <div class="row">
 
-        <form>
-            <div class="form-group">
-                
-                <label for="eng-trans">What would you like to say?</label>
-                <input type="text" class="form-control" id="trans-text"
-                    placeholder="Type what you'd like translated...">
-                    
-            </div>
+            <!-- translate starts -->
 
-            <div class="form-group">
+            <div class="col-md-12">
 
-                <div class="btn-group">
-                    <button id="lang-btn" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Select Language
-                    </button>
-                    <div id="lang-opt" class="dropdown-menu">
-                      <li class="dropdown-item" type="button">Spanish</li>
-                      <li class="dropdown-item" type="button">French</li>
-                      <li class="dropdown-item" type="button">German</li>
-                      <li class="dropdown-item" type="button">Japanese</li>
-                      <li class="dropdown-item" type="button">Russian</li>
-                      <li class="dropdown-item" type="button">English</li>
+                <form>
+
+                    <div class="form-group">
+
+                        <div id="commonQ">
+                            <p>Commonly asked Questions:</p>
+                            <button type="button" id="restroom" class="btn btn-warning common">Restroom?</button>
+                            <button type="button" id="atm" class="btn btn-warning common">ATM?</button>
+                            <button type="button" id="train" class="btn btn-warning common">Train?</button>
+                            <button type="button" id="coffee" class="btn btn-warning common">Coffee?</button>
+                            <button type="button" id="restaurant" class="btn btn-warning common">Restaurant?</button>
+                            <button type="button" id="market" class="btn btn-warning common">Market?</button>
+                        </div>
+
+                        <label for="translation">What would you like to say?</label>
+                        <textarea type="text" class="form-control" id="translation-text"
+                            placeholder="Type what you'd like translated..." rows="3"></textarea>
+
                     </div>
-                  </div>
 
-                <textarea class="form-control" placeholder="Translated text will appear here..." id="translatedText"
-                    rows="3"></textarea>
+                    <div class="form-group">
 
-                    <button class="btn btn-primary" id="trans-btn">Translate!</button>
+                        <div class="btn-group">
+
+                            <button id="lang-btn" type="button" class="btn btn-primary dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Language
+                            </button>
+
+                            <div id="lang-opt" class="dropdown-menu">
+                                <li class="dropdown-item" type="button">Spanish</li>
+                                <li class="dropdown-item" type="button">French</li>
+                                <li class="dropdown-item" type="button">German</li>
+                                <li class="dropdown-item" type="button">Japanese</li>
+                                <li class="dropdown-item" type="button">Russian</li>
+                                <li class="dropdown-item" type="button">English</li>
+                            </div>
+
+                        </div>
+
+                        <textarea class="form-control" placeholder="Translated text will appear here..."
+                            id="translatedText" rows="3"></textarea>
+
+                        <button class="btn btn-primary" id="translate-btn">Translate!</button>
+
+                    </div>
+
+                </form>
+
             </div>
 
-        </form>
+        </div>
 
     </div>
 
@@ -100,3 +132,4 @@
 </body>
 
 </html>
+
