@@ -22,38 +22,41 @@
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>TravelerPartner</title>
+    <title>Travel Buddy</title>
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-xl navbar-light">
 
-        <a class="navbar-brand" href="index.html">Travel Partner</a>
-
-        <div class="navbar-text ml-md-auto">
-            A little help is just a few clicks away!
-        </div>
-
+    <nav class="navbar navbar-dark bg-light">
+        <a class="navbar-brand" href="About.html">
+            <img class="pic" src="LOGO.png" width="30" height="30" alt="TravelBuddyLOGO" loading="lazy">
+        </a>
     </nav>
-
-    <div class="container map-container" id="map-container">
-
+    <!-- map start -->
+    <div class="map-container">
         <div class="row">
 
-            <!-- map starts -->
+            </nav>
 
-            <div class="col-md-12">
+            <div class="container map-container" id="map-container">
 
-                <div class="map-search">
-                    <div id="map"></div>
+                <div class="row">
+
+                    <!-- map starts -->
+
+                    <div class="col-md-12">
+
+                        <div class="map-search">
+                            <div id="map"></div>
+                        </div>
+
+                    </div>
+
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <div class="container" id="text-translate">
@@ -77,12 +80,17 @@
                             <button type="button" id="restaurant" class="btn btn-warning common">Restaurant?</button>
                             <button type="button" id="market" class="btn btn-warning common">Market?</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-6">
 
                         <label for="translation">What would you like to say?</label>
                         <textarea type="text" class="form-control" id="translation-text"
                             placeholder="Type what you'd like translated..." rows="3"></textarea>
 
-                    </div>
+                    
 
                     <div class="form-group">
 
@@ -101,16 +109,18 @@
                                 <li class="dropdown-item" type="button">Russian</li>
                                 <li class="dropdown-item" type="button">English</li>
                             </div>
-
                         </div>
-
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="translation">Translation</label>
                         <textarea class="form-control" placeholder="Translated text will appear here..."
                             id="translatedText" rows="3"></textarea>
 
                         <button class="btn btn-primary" id="translate-btn">Translate!</button>
 
+                    
                     </div>
-
                 </form>
 
             </div>
@@ -132,4 +142,3 @@
 </body>
 
 </html>
-
