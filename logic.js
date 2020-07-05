@@ -1,6 +1,5 @@
 var APIKey = "AIzaSyA6dPYvFRmtr6QqLt7KrqQlqXOab3FMGh0";
 var langSelected = $("#lang-btn").text();
-var translateText = $(".common").text();
 
 $(document).ready(function () {
 
@@ -18,7 +17,7 @@ $(document).ready(function () {
         }
     });
 
-    //clicking on language will update
+    //selecting language from dropdown will choose translated language
     $("#lang-opt").on("click", "li", function (event) {
         event.preventDefault();
         console.log("hello");
@@ -44,23 +43,30 @@ $(document).ready(function () {
     //quick translation buttons
     $(".common").on("click", function (event) {
         event.preventDefault();
-        var translateText = $(".common").text();
-        if ($("#restroom").text() === "Restroom?") {
+        var question = $(this).text();
+        var translateText;
+        if (question === "Restroom?") {
             translateText = "Where is the nearest bathroom?";
-        } else if ($("#atm").text() === "ATM?") {
+        } else if (question === "ATM?") {
             translateText = "Where is the nearest bank or ATM?";
-        } else if ($("#train").text() === "Train?") {
+        } else if (question === "Train?") {
             translateText = "Where is the nearest train?";
-        } else if ($("#coffee").text() === "Coffee?") {
+        } else if (question === "Coffee?") {
             translateText = "Where can I get a good cup of coffee?";
-        } else if ($("#restaurant").text() === "Restaurant?") {
+        } else if (question === "Restaurant?") {
             translateText = "What is the best restaurant in town?";
-        } else if ($("#market").text() === "Market?") {
+        } else if (question === "Market?") {
             translateText = "Where is the nearest market?";
-        };  
+        }
 
         startTranslation(translateText);
+    });
 
+    //butoon for random fact modal
+    $("#randFact").on("click", function (event) {
+        event.preventDefault();
+
+        randomFact();
     });
 
     //API call that translates the text input
@@ -82,11 +88,34 @@ $(document).ready(function () {
         });
     };
 
+    //writes translated text to textarea
     function placeTranslation(translation) {
 
         $("#translatedText").text(translation);
 
     }
+
+    function randomFact() {
+        var randomURL = "https://uselessfacts.jsph.pl/random.json?language=en"
+
+        $.ajax({
+            url: randomURL,
+            method: "GET"
+
+        }).then(function (response) {
+
+            $(".modal-body").empty();
+
+            console.log(response);
+            console.log(randomURL);
+            var fact = response.text;
+
+            $(".modal-body").append("<p class='modal-body'>" + fact + "</p>");
+
+
+        });
+
+        };
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiY291cnRuZXlqIiwiYSI6ImNrYzN0OW12ZDAxOGwycW1ydjc0bW9mMG0ifQ.VWF3V-tNFAcHm2RpqpbBTg';
     var map = new mapboxgl.Map({
