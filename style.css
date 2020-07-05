@@ -3,20 +3,15 @@
   }
 
 
-  body {
-      border: 0px;
-      margin: 0px;
-      /* background: url(https://miro.medium.com/max/3840/1*xMuIOwjliGUPjkzukeWKfw.jpeg); */
-      background-color: #f1faee;
-  }
-
-/* form {
-    margin-top: 10px;
-} */
-
-iframe {
-    margin-top: 5px;
+body {
+    border: 0px;
+    margin: 0px;
+    background-color: #f1faee;
 }
+
+/* iframe {
+    margin-top: 5px;
+} */
 
 p {
     margin-bottom: 5px;
@@ -29,17 +24,15 @@ p {
     margin-bottom: 5px;
     margin-bottom: 5px;
     background-color: #a8dadc;
+    border-color: #a8dadc;
     font-weight: 700;
 }
-
 
 .btn-primary {
     margin-top: 5px;
     background-color: #f4a261;
+    border-color: #f4a261
 }
-/* #translate-btn {
-    background-color: #e9c46a;
-} */
 
 .btn-group {
     margin-bottom: 10px;
@@ -50,38 +43,35 @@ p {
     margin-bottom: 0px;
     background-color: #264653 !important;
     color: white;
-    
-
 }
+
 img {
-    width: 50%;
+    width: auto;
     height: 40px;
 }
 
-  .navbar-brand {
-      width: 40%;
-      height: 40px;
-      
-
-  }
+.navbar-brand {
+    width: 40%;
+    height: 40px;
+}
 
 
-  .navbar-text {
-      padding-bottom: 0px;
-      color: white;
-  }
-
-  
+.navbar-text {
+    padding-bottom: 0px;
+    color: white;
+}
 
 .form-control {
     margin-bottom: 5px;
 }
+
 .form-group {
     margin-bottom: 5px;
     color: white;
     font-size: 24px;
     font-weight: 600;
 }
+
  /* Map style */
 #map {
 width: 90%; 
@@ -90,16 +80,12 @@ border-radius: 10px;
 border-width: 5px;
 margin-top: 10px;
 margin-bottom: 15px;
-
-
 }
+
 .map-container {
     margin: auto;
 }
-/* #search-input {
-    width: 80%; 
-  
-} */
+
 .map-search {
     margin: 0;
     text-align: -webkit-center;
@@ -109,58 +95,44 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+}   
+      
+.btn-lg {
+    background-color: #457b9d;
 }
-
-  
-
-
-/* for the jumbotron */
-  .jumbotron {
-    /* max-height: 50px; */
-    color: rgb(184, 15, 15);
-    font-size: 12px;
-    background-color: #a8dadc;
-     margin-top: 15px;
-     max-width: 100%;
-   
-    
-    /* background-image: linear-gradient(#577590, #43aa8b, #90be6d); */
-  }
-  .btn-lg {
-      background-color: #457b9d;
-  }
 
 .display-4 {
     font-size: 60px;
 }
+
 .lead {
     font-size: 25px;
     font-weight: bolder;
 }
+
 .follow {
     font-weight: normal;
 }
+
 .map-2 {
     width: 100%;
     max-height: 40px;
     display: inline;
 }
 
-  @media (max-width: 484px) {
+@media (max-width: 484px) {
 
-    .navbar {
-        justify-content: center;
-    }
-    .navbar-brand {
-        height: 40px;
-        width: auto;
-    }
+.navbar {
+    justify-content: center;
+}
+
+.navbar-brand {
+    height: 40px;
+    width: auto;
+}
 
 .ml-auto {
     margin-left: none;
 }
 
-    #text-trans {
-        text-align: center;
-    }
-  }
+}

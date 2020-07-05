@@ -10,34 +10,31 @@ $(document).ready(function () {
         startTranslation(translateText);
     });
 
-    //allows enter button to be used to "click" the translate button
-    $('#translate-btn').keypress(function (event) {
-        if (event.which == 13) {
-            $('#translate-btn').click();
-        }
-    });
-
     //selecting language from dropdown will choose translated language
     $("#lang-opt").on("click", "li", function (event) {
         event.preventDefault();
         console.log("hello");
         $("#lang-btn").text($(this).text());
-        
-        if ($("#lang-btn").text() === "Spanish") {
-            langSelected = "es";
-        } else if ($("#lang-btn").text() === "French") {
-            langSelected = "fr";
-        } else if ($("#lang-btn").text() === "German") {
-            langSelected = "de";
-        } else if ($("#lang-btn").text() === "Japanese") {
-            langSelected = "ja";
-        } else if ($("#lang-btn").text() === "Russian") {
-            langSelected = "ru";
-        } else {
-            langSelected = "en";
-        }
-        console.log(langSelected);
-       
+
+        switch ($("#lang-btn").text()) {
+            case "Spanish":
+                langSelected = "es";
+                break;
+            case "French":
+                langSelected = "fr";
+                break;
+            case "German":
+                langSelected = "de";
+                break;
+            case "Japanese":
+                langSelected = "ja";
+                break;
+            case "Russian":
+                langSelected = "ru";
+                break;
+            default:
+                langSelected = "en";
+        };
     });
  
     //quick translation buttons
@@ -45,24 +42,31 @@ $(document).ready(function () {
         event.preventDefault();
         var question = $(this).text();
         var translateText;
-        if (question === "Restroom?") {
-            translateText = "Where is the nearest bathroom?";
-        } else if (question === "ATM?") {
-            translateText = "Where is the nearest bank or ATM?";
-        } else if (question === "Train?") {
-            translateText = "Where is the nearest train?";
-        } else if (question === "Coffee?") {
-            translateText = "Where can I get a good cup of coffee?";
-        } else if (question === "Restaurant?") {
-            translateText = "What is the best restaurant in town?";
-        } else if (question === "Market?") {
-            translateText = "Where is the nearest market?";
-        }
 
+        switch (question) {
+            case "Restroom?":
+                translateText = "Where is the nearest bathroom?";
+                break;
+            case "ATM?":  
+                translateText = "Where is the nearest bank or ATM?";
+                break;
+            case "Train?":  
+                translateText = "Where is the nearest train?";
+                break;
+            case "Coffee?":  
+                translateText = "Where can I get a good cup of coffee?";
+                break;
+            case "Restaurant?":  
+                translateText = "What is the best restaurant in town?";
+                break;
+            default:
+                translateText = "Where is the nearest market?";
+        };
         startTranslation(translateText);
     });
 
-    //butoon for random fact modal
+
+    //button for random fact modal
     $("#randFact").on("click", function (event) {
         event.preventDefault();
 
