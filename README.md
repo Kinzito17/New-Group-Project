@@ -20,6 +20,6 @@ __Currently Supported Output Language__
 
 *Detects local language as input without altering any settings.*
 
-Project Demo:
+*Project Demo:*
 
 ![travel-buddy-demo](travelbuddy1.gif)
