@@ -22,4 +22,4 @@ __Currently Supported Output Language__
 
 Project Demo:
 
-![travel-buddy-demo](travelbuddy.gif)
+![travel-buddy-demo](travelbuddy1.gif)
