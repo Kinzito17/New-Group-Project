@@ -19,6 +19,14 @@ p {
     font-size: 24px;
     font-weight: 600;
 }
+label {
+    font-weight: 500px;
+}
+.footer {
+    margin-top: auto;
+    position: relative;
+    background-color: #264653 !important;
+}
 
 .common {
     margin-bottom: 5px;
@@ -30,6 +38,7 @@ p {
 
 .btn-primary {
     margin-top: 5px;
+    margin-bottom: 10px;
     background-color: #f4a261;
     border-color: #f4a261
 }
@@ -92,6 +101,7 @@ margin-bottom: 15px;
 }
 
 body {
+    font-family: hero-new, sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -119,12 +129,21 @@ body {
     max-height: 40px;
     display: inline;
 }
+/* modal */
+.modal-footer, .modal-header {
+    background-color:  #a8dadc;
+}
+.modal-body {
+    background-color: #f1faee;
+}
+.btn-secondary {
+    background-color: #1d3557 ;
+    border-color: #1d3557;
+    
+}
 
 @media (max-width: 484px) {
 
-.navbar {
-    justify-content: center;
-}
 
 .navbar-brand {
     height: 40px;
@@ -135,4 +154,24 @@ body {
     margin-left: none;
 }
 
+    
+
 }
+
+@media (max-width: 376px) {
+    .footer {
+        position: relative;
+}
+}
+@media (max-width: 767px) {
+    .footer {
+        position: static;
+}
+}
+@media (width: 768px) and  (min-height: 1024px) {
+    .footer {
+        position: absolute;
+}
+}
+
+

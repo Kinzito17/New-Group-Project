@@ -13,7 +13,6 @@ $(document).ready(function () {
     //selecting language from dropdown will choose translated language
     $("#lang-opt").on("click", "li", function (event) {
         event.preventDefault();
-        console.log("hello");
         $("#lang-btn").text($(this).text());
 
         switch ($("#lang-btn").text()) {
@@ -36,7 +35,7 @@ $(document).ready(function () {
                 langSelected = "en";
         };
     });
- 
+
     //quick translation buttons
     $(".common").on("click", function (event) {
         event.preventDefault();
@@ -47,16 +46,16 @@ $(document).ready(function () {
             case "Restroom?":
                 translateText = "Where is the nearest bathroom?";
                 break;
-            case "ATM?":  
+            case "ATM?":
                 translateText = "Where is the nearest bank or ATM?";
                 break;
-            case "Train?":  
+            case "Train?":
                 translateText = "Where is the nearest train?";
                 break;
-            case "Coffee?":  
+            case "Coffee?":
                 translateText = "Where can I get a good cup of coffee?";
                 break;
-            case "Restaurant?":  
+            case "Restaurant?":
                 translateText = "What is the best restaurant in town?";
                 break;
             default:
@@ -82,10 +81,7 @@ $(document).ready(function () {
             method: "POST"
 
         }).then(function (response) {
-            console.log(queryURL);
-            console.log(response);
             var translation = response.data.translations[0].translatedText;
-            console.log(translation);
 
             placeTranslation(translation);
 
@@ -110,8 +106,7 @@ $(document).ready(function () {
 
             $(".modal-body").empty();
 
-            console.log(response);
-            console.log(randomURL);
+
             var fact = response.text;
 
             $(".modal-body").append("<p class='modal-body'>" + fact + "</p>");
@@ -119,21 +114,32 @@ $(document).ready(function () {
 
         });
 
-        };
+    };
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiY291cnRuZXlqIiwiYSI6ImNrYzN0OW12ZDAxOGwycW1ydjc0bW9mMG0ifQ.VWF3V-tNFAcHm2RpqpbBTg';
     var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-97.7431, 30.2672],
-    zoom: 13
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-97.7431, 30.2672],
+        zoom: 0
     });
-     
+
+
+
     map.addControl(
-    new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
-    })
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        })
+    );
+    // Add geolocate control to the map.
+    map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true
+        })
     );
 
     // map logic end
