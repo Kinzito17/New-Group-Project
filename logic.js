@@ -95,6 +95,7 @@ $(document).ready(function () {
 
     }
 
+    //random fact api call
     function randomFact() {
         var randomURL = "https://uselessfacts.jsph.pl/random.json?language=en"
 
@@ -106,16 +107,15 @@ $(document).ready(function () {
 
             $(".modal-body").empty();
 
-
             var fact = response.text;
 
             $(".modal-body").append("<p class='modal-body'>" + fact + "</p>");
-
 
         });
 
     };
 
+    //map content below
     mapboxgl.accessToken = 'pk.eyJ1IjoiY291cnRuZXlqIiwiYSI6ImNrYzN0OW12ZDAxOGwycW1ydjc0bW9mMG0ifQ.VWF3V-tNFAcHm2RpqpbBTg';
     var map = new mapboxgl.Map({
         container: 'map',
@@ -123,8 +123,6 @@ $(document).ready(function () {
         center: [-97.7431, 30.2672],
         zoom: 0
     });
-
-
 
     map.addControl(
         new MapboxGeocoder({
