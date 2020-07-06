@@ -16,7 +16,7 @@ __Currently Supported Output Language__
 - German
 - French
 - Russian
--English
+- English
 
 *Detects local language as input without altering any settings.*
 
